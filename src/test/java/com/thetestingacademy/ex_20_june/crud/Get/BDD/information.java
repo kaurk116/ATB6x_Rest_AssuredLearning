@@ -4,7 +4,7 @@ public class information {
     //Two way o create a RA testcases
     //BDD Style -Given,when ,Then -D1
     //Non Bdd Style -Class and Object -D2
-
+///
     //Get Request -http://api.zippoptam.us/IN/{Pincode}
     //URL -
     //Path- In/{pincode}

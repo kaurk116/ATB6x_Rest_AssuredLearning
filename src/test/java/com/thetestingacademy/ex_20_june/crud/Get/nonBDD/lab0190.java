@@ -11,7 +11,7 @@ public class lab0190 {
     rs.baseUri("https://api.zippopotam.us");
     rs.basePath("/IN/560037");
     rs.when().get().then().log().all().statusCode(200);
-
+//
 
     }
 

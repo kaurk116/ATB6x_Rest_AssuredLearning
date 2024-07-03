@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class lab0196 {
 
-
+//
     RequestSpecification rs = RestAssured.given();
     Response rp;
     ValidatableResponse vv;
