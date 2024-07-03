@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Rest_Assured_learning">
+       <packages>
+           <package name ="com.thetestingacademy.crud.Post"></package>
+           <package name ="com.thetestingacademy.crud.Put"></package>
+           <package name ="com.thetestingacademy.crud.Get.BDD"></package>
+           <package name ="com.thetestingacademy.crud.Get.nonBDD"></package>
+           <package name ="com.thetestingacademy.crud.Patch"></package>
+           <package name ="com.thetestingacademy.crud.Delete"></package>
+           </packages>
+    </test>
+</suite>

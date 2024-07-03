@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Rest_Assured_learning"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.002">
+    <properties></properties>
+
+
+
+            <testcase
+                name="test"
+                time="0.002"
+                classname="ex_18_06_2024.lab0187">
+            </testcase>
+</testsuite>

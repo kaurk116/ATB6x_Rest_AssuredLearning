@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="/home/karam/Documents/Rest_Assured_learning/ATB6X_Rest_Assured_learning/src/test/java/com/thetestingacademy/ex_25_june"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.129">
+    <properties></properties>
+
+
+
+            <testcase
+                name="RegrationRun"
+                time="0.122"
+                classname="com.thetestingacademy.ex_25_june.lab0201">
+            </testcase>
+            <testcase
+                name="SmokeRun"
+                time="0.004"
+                classname="com.thetestingacademy.ex_25_june.lab0201">
+            </testcase>
+            <testcase
+                name="SanityRun"
+                time="0.003"
+                classname="com.thetestingacademy.ex_25_june.lab0201">
+            </testcase>
+</testsuite>

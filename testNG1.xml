@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite karam">
+    <test verbose="2" preserve-order="true"
+          name="ATB6X_Rest_Assured_learning">
+        <classes>
+            <class name="ex_18_06_2024.lab0188"></class>
+        </classes>
+    </test>
+</suite>

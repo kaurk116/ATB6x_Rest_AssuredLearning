@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ATB6X_Rest_Assured_learning"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.124">
+    <properties></properties>
+
+
+
+            <testcase
+                name="getBookingId"
+                time="0.098"
+                classname="com.thetestingacademy.ex_25_june.lab0203">
+            </testcase>
+            <testcase
+                name="putupdatebooking"
+                time="0.026"
+                classname="com.thetestingacademy.ex_25_june.lab0203">
+            </testcase>
+</testsuite>

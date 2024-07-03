@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ATB6X_Rest_Assured_learning"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="13.603">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Get_Method_AB"
+                time="13.595"
+                classname="com.thetestingacademy.ex_25_june.lab0198">
+            </testcase>
+            <testcase
+                name="Get_Method_AC"
+                time="0.004"
+                classname="com.thetestingacademy.ex_25_june.lab0198">
+            </testcase>
+            <testcase
+                name="Get_Method_AN"
+                time="0.004"
+                classname="com.thetestingacademy.ex_25_june.lab0198">
+            </testcase>
+</testsuite>
