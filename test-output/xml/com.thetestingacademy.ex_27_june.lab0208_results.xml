@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ATB6X_Rest_Assured_learning"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.423">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Post_Request_NonBdd"
+                time="0.423"
+                classname="com.thetestingacademy.ex_27_june.GSON.serilizisation.lab0208">
+            </testcase>
+</testsuite>

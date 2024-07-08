@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ATB6X_Rest_Assured_learning"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.937">
+    <properties></properties>
+
+
+
+            <testcase
+                name="post_request_Jackson"
+                time="2.937"
+                classname="com.thetestingacademy.ex_27_june.Jackson.lab0212_deserillization">
+            </testcase>
+</testsuite>

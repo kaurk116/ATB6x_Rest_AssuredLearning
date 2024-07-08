@@ -12,11 +12,11 @@
             <testcase
                 name="getRequest2"
                 time="3.609"
-                classname="ex_18_06_2024.lab0185">
+                classname="ex_18_june.lab0185">
             </testcase>
             <testcase
                 name="getRequest"
                 time="28.598"
-                classname="ex_18_06_2024.lab0185">
+                classname="ex_18_june.lab0185">
             </testcase>
 </testsuite>

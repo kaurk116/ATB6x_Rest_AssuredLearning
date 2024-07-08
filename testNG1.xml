@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true"
           name="ATB6X_Rest_Assured_learning">
         <classes>
-            <class name="ex_18_06_2024.lab0188"></class>
+            <class name="ex_18_june.lab0188"></class>
         </classes>
     </test>
 </suite>

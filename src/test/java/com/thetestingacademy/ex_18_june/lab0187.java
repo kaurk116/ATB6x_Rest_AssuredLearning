@@ -1,4 +1,4 @@
-package ex_18_06_2024;
+package com.thetestingacademy.ex_18_june;
 
 import org.testng.annotations.*;
 

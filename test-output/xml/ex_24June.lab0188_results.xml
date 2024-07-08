@@ -12,11 +12,11 @@
             <testcase
                 name="Soft_Assertion"
                 time="0.010"
-                classname="ex_18_06_2024.lab0188">
+                classname="ex_18_june.lab0188">
             </testcase>
             <testcase
                 name="Hard_Assertion"
                 time="0.188"
-                classname="ex_18_06_2024.lab0188">
+                classname="ex_18_june.lab0188">
             </testcase>
 </testsuite>

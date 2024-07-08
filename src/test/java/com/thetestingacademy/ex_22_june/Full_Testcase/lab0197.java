@@ -24,8 +24,8 @@ public class lab0197 {
 
     @BeforeTest
     @Test
-    public  void getAToken(){
-        String payload="{\n" +
+    public void getAToken() {
+        String payload = "{\n" +
                 "    \"username\" : \"admin\",\n" +
                 "    \"password\" : \"password123\"\n" +
                 "}";
@@ -34,20 +34,21 @@ public class lab0197 {
         requestSpecification.contentType(ContentType.JSON);
         requestSpecification.body(payload);
 
-        response=requestSpecification.post();
+        response = requestSpecification.post();
 
-        validatableResponse =response.then();
+        validatableResponse = response.then();
         validatableResponse.statusCode(200);
 
         //Extract the token from this
 
-        token=response.then().log().all().extract().path("token");
+        token = response.then().log().all().extract().path("token");
         Assert.assertNotNull(token);
     }
-@BeforeTest
-@Test
-    public  void getBookingId(){
-        String payload ="{\n" +
+
+    @BeforeTest
+    @Test
+    public void getBookingId() {
+        String payload = "{\n" +
                 "    \"firstname\" : \"Anavia\",\n" +
                 "    \"lastname\" : \"saini\",\n" +
                 "    \"totalprice\" : 111,\n" +
@@ -64,26 +65,27 @@ public class lab0197 {
         requestSpecification.contentType(ContentType.JSON);
         requestSpecification.body(payload);
 
-        response=requestSpecification.when().post();
+        response = requestSpecification.when().post();
 
-        ValidatableResponse validatableResponse =  response.then();
-        String responseString=response.asString();
+        ValidatableResponse validatableResponse = response.then();
+        String responseString = response.asString();
         System.out.println(responseString);
 
         validatableResponse.statusCode(200);
 
-        bookingId=response.then().log().all().extract().path("bookingid");
-        String firstName= response.then().log().all().extract().path("booking.firstname");
+        bookingId = response.then().log().all().extract().path("bookingid");
+        String firstName = response.then().log().all().extract().path("booking.firstname");
         System.out.println(firstName);
         System.out.println(bookingId);
         Assert.assertNotNull(bookingId);
-        validatableResponse.body("booking.firstname" , Matchers.equalToObject("Anavia"));
+        validatableResponse.body("booking.firstname", Matchers.equalToObject("Anavia"));
     }
-@Test
-    public void  testPUTRequestPositive(){
 
-    System.out.println(" - Test Case PUT Request ");
-        String payload ="{\n" +
+    @Test
+    public void testPUTRequestPositive() {
+
+        System.out.println(" - Test Case PUT Request ");
+        String payload = "{\n" +
                 "    \"firstname\" : \"Anavia\",\n" +
                 "    \"lastname\" : \"saini\",\n" +
                 "    \"totalprice\" : 111,\n" +
@@ -96,23 +98,22 @@ public class lab0197 {
                 "}";
 
 
-        requestSpecification=RestAssured.given();
+        requestSpecification = RestAssured.given();
         requestSpecification.baseUri("https://restful-booker.herokuapp.com/");
-        requestSpecification.basePath("booking/"+bookingId);
+        requestSpecification.basePath("booking/" + bookingId);
         requestSpecification.contentType(ContentType.JSON);
-        requestSpecification.cookie("token",token);
+        requestSpecification.cookie("token", token);
 
         requestSpecification.body(payload).log().all();
 
-        response=requestSpecification.when().put();
+        response = requestSpecification.when().put();
 
-        validatableResponse= response.then().log().all();
+        validatableResponse = response.then().log().all();
         validatableResponse.statusCode(200);
 
-        String firstnameresponse= response.then().log().all().extract().path("firstname");
+        String firstnameresponse = response.then().log().all().extract().path("firstname");
         System.out.println(firstnameresponse);
-        Assert.assertEquals(firstnameresponse,"Anavia");
-
+        Assert.assertEquals(firstnameresponse, "Anavia");
 
 
         //# way to get the responce
@@ -121,51 +122,42 @@ public class lab0197 {
 
         validatableResponse.body("firstname", Matchers.equalToObject("Anavia"));
         validatableResponse.body("lastname", Matchers.equalToObject("saini"));
-     //2.TestNG Asserts-
-    //TestNG Assert.assertEquals(firstnameresponse,"Anavia");
-    String firstNameResponse =response.then().log().all().extract().path("firstname");
-    Assert.assertEquals(firstNameResponse,"Anavia");
-    System.out.println(firstNameResponse);
+        //2.TestNG Asserts-
+        //TestNG Assert.assertEquals(firstnameresponse,"Anavia");
+        String firstNameResponse = response.then().log().all().extract().path("firstname");
+        Assert.assertEquals(firstNameResponse, "Anavia");
+        System.out.println(firstNameResponse);
 
-    //extract dates
-    String checkoutdates =response.then().extract().path("bookingdates.checkout");
-    Assert.assertEquals(checkoutdates,"2019-01-01");
-    System.out.println(checkoutdates);
+        //extract dates
+        String checkoutdates = response.then().extract().path("bookingdates.checkout");
+        Assert.assertEquals(checkoutdates, "2019-01-01");
+        System.out.println(checkoutdates);
 
-    //to get the all keys
-    String fullResponseJSONString =response.asString();
-    System.out.println(fullResponseJSONString);
+        //to get the all keys
+        String fullResponseJSONString = response.asString();
+        System.out.println(fullResponseJSONString);
 
-    //3.TestNG Assertion with Json Path Lib
-    String onebyoneresponse =response.asString();
-    JsonPath jsonPath =new JsonPath(onebyoneresponse);
-    String firstname = jsonPath.getString("firstname");
-    Integer totalprice = jsonPath.getInt("totalprice");
-    String  checkindates =jsonPath.getString("bookingdates.checkin");
-    //System.out.println(firstname);
+        //3.TestNG Assertion with Json Path Lib
+        String onebyoneresponse = response.asString();
+        JsonPath jsonPath = new JsonPath(onebyoneresponse);
+        String firstname = jsonPath.getString("firstname");
+        Integer totalprice = jsonPath.getInt("totalprice");
+        String checkindates = jsonPath.getString("bookingdates.checkin");
+        //System.out.println(firstname);
 
-    Assert.assertEquals(firstname,"Anavia");
-    Assert.assertEquals(totalprice,111);
-    Assert.assertEquals(checkindates,"2018-01-01");
-    System.out.println(firstname);
-    System.out.println(totalprice);
-    System.out.println(checkindates);
+        Assert.assertEquals(firstname, "Anavia");
+        Assert.assertEquals(totalprice, 111);
+        Assert.assertEquals(checkindates, "2018-01-01");
+        System.out.println(firstname);
+        System.out.println(totalprice);
+        System.out.println(checkindates);
 
-    // 4. AssertJ Matching
+        // 4. AssertJ Matching
 
-    assertThat(firstname)
-            .isEqualTo("Anavia")
-            .isNotBlank().isNotEmpty();
+        assertThat(firstname)
+                .isEqualTo("Anavia")
+                .isNotBlank().isNotEmpty();
 
-    assertThat(totalprice).isPositive().isNotZero();
-
-
-
-
-
-
-
-}
-
-
+        assertThat(totalprice).isPositive().isNotZero();
+    }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="/home/karam/Documents/Rest_Assured_learning/ATB6X_Rest_Assured_learning/src/test/java/com/thetestingacademy/ex_25_june">
+    <test verbose="2" preserve-order="true" name="Rest Assure Learning">
         <!--<groups>
             <run>
              <include name="sanity"/>
@@ -9,7 +9,6 @@
         <parameter name="browser" value="firefox"></parameter>
 
         <classes>
-
             <class name="com.thetestingacademy.ex_25_june.lab0204">
             </class>
         </classes>
